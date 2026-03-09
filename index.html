@@ -1,0 +1,367 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Imvix 是面向 Windows 的现代桌面图像转换工具，支持批量处理、智能格式推荐、体积预估与文件夹监听。">
+  <title>Imvix | 桌面图像转换工具</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="ambient ambient-left" aria-hidden="true"></div>
+  <div class="ambient ambient-right" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Imvix 首页">
+      <img src="assets/logo.png" alt="Imvix 标志">
+      <span>Imvix</span>
+    </a>
+
+    <div class="header-actions">
+            <div class="header-release" aria-label="当前稳定版本">稳定版 v1.3.0</div>
+      <a class="github-link" href="https://github.com/LPHYSQS/Imvix" target="_blank" rel="noreferrer" aria-label="访问 Imvix GitHub 仓库">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.426 2.865 8.18 6.839 9.504.5.093.682-.217.682-.483 0-.237-.009-.868-.014-1.704-2.782.61-3.369-1.343-3.369-1.343-.455-1.158-1.11-1.467-1.11-1.467-.908-.62.069-.608.069-.608 1.004.072 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.091-.647.349-1.088.635-1.338-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.987 1.03-2.687-.103-.253-.447-1.272.098-2.65 0 0 .84-.27 2.75 1.027A9.56 9.56 0 0 1 12 6.836c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.202 2.398.1 2.65.64.7 1.028 1.594 1.028 2.687 0 3.848-2.338 4.695-4.566 4.943.359.31.679.92.679 1.855 0 1.338-.012 2.418-.012 2.747 0 .268.18.58.688.481A10.02 10.02 0 0 0 22 12.017C22 6.484 17.523 2 12 2Z" />
+        </svg>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        菜单
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="主导航">
+        <a href="#features">功能</a>
+        <a href="#workflow">流程</a>
+        <a href="#downloads">下载</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero reveal" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">Imvix 官方网站</p>
+        <h1>把批量图片处理，整理成顺手的桌面工作流。</h1>
+        <p class="hero-text">
+          支持批量导入、格式转换、压缩调优、尺寸缩放、智能推荐、历史记录与文件夹监听，
+          让高频图片处理不再零散，也让每一次导出更可控。
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#downloads">立即下载</a>
+          <a class="button button-secondary" href="#workflow">了解流程</a>
+        </div>
+
+        <div class="hero-proof" aria-label="产品概览">
+          <article class="proof-item">
+            <span>适合场景</span>
+            <strong>批量素材整理</strong>
+          </article>
+          <article class="proof-item">
+            <span>核心能力</span>
+            <strong>批量转换与监听模式</strong>
+          </article>
+          <article class="proof-item">
+            <span>适用系统</span>
+            <strong>Windows 10 / 11</strong>
+          </article>
+        </div>
+      </div>
+
+      <div class="hero-stage" aria-hidden="true">
+        <div class="screen-window">
+          <div class="screen-topbar">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="screen-body">
+            <aside class="screen-sidebar">
+              <div class="sidebar-logo">
+                <img src="assets/logo.png" alt="">
+                <strong>Imvix</strong>
+              </div>
+              <div class="sidebar-item active">批量导入</div>
+              <div class="sidebar-item">智能推荐</div>
+              <div class="sidebar-item">转换预设</div>
+              <div class="sidebar-item">文件夹监听</div>
+
+
+            </aside>
+
+            <div class="screen-panel">
+              <div class="stage-overview">
+                <div class="panel-card panel-card-wide">
+                  <span class="card-kicker">Workspace</span>
+                  <strong>在一个窗口里，完成导入、分析、导出和回看。</strong>
+                  <p>把格式、质量、尺寸、命名和输出目录集中在同一处管理，减少频繁切换工具带来的割裂感。</p>
+                </div>
+
+                <div class="signal-card">
+                  <span>智能提示</span>
+                  <strong>透明背景保留、压缩风险提醒</strong>
+                </div>
+              </div>
+
+              <div class="panel-row panel-row-large">
+                <div class="panel-card">
+                  <span class="card-kicker">Formats</span>
+                  <div class="format-chip-group" aria-label="支持格式">
+                    <span class="format-chip">PNG</span>
+                    <span class="format-chip">JPEG</span>
+                    <span class="format-chip">WEBP</span>
+                    <span class="format-chip">BMP</span>
+                    <span class="format-chip">GIF</span>
+                    <span class="format-chip">TIFF</span>
+                    <span class="format-chip">ICO</span>
+                    <span class="format-chip">SVG</span>
+                  </div>
+                  <p>常用输入输出格式集中管理，转换设置更直观。</p>
+                </div>
+                <div class="panel-card highlight">
+                  <span class="card-kicker">Insight</span>
+                  <strong>导出前就能看到体积预估与格式建议</strong>
+                  <p>减少反复试错，让透明背景、压缩风险与推荐格式更早暴露出来。</p>
+                </div>
+              </div>
+
+              <div class="panel-row panel-row-stats">
+                <article class="mini-stat" data-mini-stat>
+                  <button class="mini-stat-trigger" type="button" aria-expanded="false" aria-controls="mini-stat-import">
+                    <span class="mini-stat-kicker">导入方式</span>
+                    <strong class="mini-stat-brief">3 项入口</strong>
+                    <span class="mini-stat-hint">点击查看详情</span>
+                  </button>
+                  <div class="mini-stat-popover" id="mini-stat-import" role="note" aria-label="导入方式详情">
+                    <span class="mini-stat-popover-title">导入方式</span>
+                    <ul class="mini-stat-detail-list">
+                      <li>多文件导入</li>
+                      <li>文件夹导入</li>
+                      <li>拖拽导入</li>
+                    </ul>
+                  </div>
+                </article>
+
+                <article class="mini-stat" data-mini-stat>
+                  <button class="mini-stat-trigger" type="button" aria-expanded="false" aria-controls="mini-stat-flow">
+                    <span class="mini-stat-kicker">工作流控制</span>
+                    <strong class="mini-stat-brief">4 项控制</strong>
+                    <span class="mini-stat-hint">点击查看详情</span>
+                  </button>
+                  <div class="mini-stat-popover" id="mini-stat-flow" role="note" aria-label="工作流控制详情">
+                    <span class="mini-stat-popover-title">工作流控制</span>
+                    <ul class="mini-stat-detail-list">
+                      <li>转换预设</li>
+                      <li>暂停任务</li>
+                      <li>继续处理</li>
+                      <li>随时取消</li>
+                    </ul>
+                  </div>
+                </article>
+
+                <article class="mini-stat" data-mini-stat>
+                  <button class="mini-stat-trigger" type="button" aria-expanded="false" aria-controls="mini-stat-watch">
+                    <span class="mini-stat-kicker">目录监听</span>
+                    <strong class="mini-stat-brief">3 步自动处理</strong>
+                    <span class="mini-stat-hint">点击查看详情</span>
+                  </button>
+                  <div class="mini-stat-popover" id="mini-stat-watch" role="note" aria-label="目录监听详情">
+                    <span class="mini-stat-popover-title">目录监听</span>
+                    <ul class="mini-stat-detail-list">
+                      <li>检测新图片</li>
+                      <li>自动转换</li>
+                      <li>输出到目标目录</li>
+                    </ul>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="launch-strip reveal" aria-label="核心信息">
+      <article class="launch-card">
+        <span>下载渠道</span>
+        <strong>GitHub 发布页与备用下载</strong>
+      </article>
+      <article class="launch-card">
+        <span>场景</span>
+        <strong>适合设计、内容运营与开发流程</strong>
+      </article>
+      <article class="launch-card">
+        <span>能力</span>
+        <strong>批量处理、历史记录与监听模式</strong>
+      </article>
+      <article class="launch-card">
+        <span>安装架构</span>
+        <strong>x86 / x64 / ARM64</strong>
+      </article>
+    </section>
+
+    <section class="section reveal" id="features">
+      <div class="section-heading">
+        <p class="eyebrow">核心功能</p>
+        <h2>不只是“能转格式”，而是把重复动作收拢成完整流程。</h2>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card feature-card-primary">
+          <span class="feature-index">01</span>
+          <h3>批量导入</h3>
+          <p>支持多文件、文件夹和拖拽导入，可按需递归读取子目录，适合高频处理整批素材。</p>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-index">02</span>
+          <h3>输出可控</h3>
+          <p>格式、质量、尺寸、命名规则、输出目录与覆盖策略都可独立设置，减少重复操作。</p>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-index">03</span>
+          <h3>智能辅助</h3>
+          <p>根据图片内容给出格式建议，并提示透明背景与高压缩风险，让导出决策更稳。</p>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-index">04</span>
+          <h3>历史与恢复</h3>
+          <p>最近历史、失败日志与监听模式结合使用，方便你回看、追踪和持续处理新增图片。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal" id="workflow">
+      <div class="section-heading compact">
+        <p class="eyebrow">工作流程</p>
+        <h2>从导入到导出，界面应该给人连续感，而不是工具碎片感。</h2>
+      </div>
+
+      <div class="workflow-grid">
+        <article class="workflow-card">
+          <span class="workflow-step">Step 1</span>
+          <h3>导入素材</h3>
+          <p>用文件、文件夹或拖拽把素材拉进来，快速建立批量队列。</p>
+        </article>
+
+        <article class="workflow-card">
+          <span class="workflow-step">Step 2</span>
+          <h3>调整规则</h3>
+          <p>设置格式、质量、尺寸与命名，同时参考推荐格式和风险提示。</p>
+        </article>
+
+        <article class="workflow-card">
+          <span class="workflow-step">Step 3</span>
+          <h3>自动持续处理</h3>
+          <p>保存为预设或启用文件夹监听，让后续新增图片按同样规则自动转换。</p>
+        </article>
+      </div>
+
+      <div class="workflow-banner">
+        <div>
+          <span class="workflow-banner-kicker">更适合谁</span>
+          <strong>经常重复导出图片、切格式、控体积，或者要持续处理新增素材的人。</strong>
+        </div>
+        <p>如果你的日常工作里总会反复做“换格式、调质量、改尺寸、导出到指定目录”这些动作，Imvix 会比零散脚本或临时工具更顺手。</p>
+      </div>
+    </section>
+
+    <section class="section reveal" id="downloads">
+      <div class="section-heading">
+        <p class="eyebrow">下载获取</p>
+        <h2>先帮你判断版本，<span class="keep-inline">再开始下载。</span></h2>
+      </div>
+
+      <div class="download-layout">
+        <article class="download-summary">
+          <div class="download-summary-copy">
+            <span class="download-summary-kicker">下载建议</span>
+            <h3>默认优先选择 x64 版。</h3>
+            <p>如果你的电脑是近几年常见的 64 位 Windows 设备，直接下载 x64 版即可。仍在使用 32 位系统时选 x86，基于 ARM 的 Windows 设备选择 ARM64。</p>
+          </div>
+
+          <div class="arch-grid" aria-label="架构说明">
+            <div class="arch-pill">
+              <strong>x64</strong>
+              <span>绝大多数设备</span>
+            </div>
+            <div class="arch-pill">
+              <strong>x86</strong>
+              <span>旧设备兼容</span>
+            </div>
+            <div class="arch-pill">
+              <strong>ARM64</strong>
+              <span>ARM Windows</span>
+            </div>
+          </div>
+
+          <ul class="download-checklist" aria-label="下载前确认">
+            <li>常规电脑优先选择 x64</li>
+            <li>ARM 设备请选择 ARM64</li>
+            <li>GitHub 较慢时可切换备用下载</li>
+          </ul>
+
+          <div class="download-summary-foot">
+            <p class="download-summary-note">发布页会集中提供各架构安装包与更新记录。</p>
+            <a class="button button-secondary button-block" href="https://github.com/LPHYSQS/Imvix/releases" target="_blank" rel="noreferrer">前往发布页</a>
+          </div>
+        </article>
+
+        <div class="download-grid download-grid-four">
+          <article class="download-card download-card-featured">
+            <div class="download-head">
+              <span class="download-badge">推荐</span>
+              <h3>Windows x64</h3>
+            </div>
+            <p>适合绝大多数 64 位 Windows 电脑与笔记本，首次下载建议优先选择此版本。</p>
+            <button class="button button-primary button-block" type="button" data-download="x64">下载 x64 版</button>
+          </article>
+
+          <article class="download-card">
+            <div class="download-head">
+              <span class="download-badge subtle">兼容</span>
+              <h3>Windows x86</h3>
+            </div>
+            <p>适合仍在使用 32 位 Windows 环境的设备，面向老旧机器的兼容安装需求。</p>
+            <button class="button button-secondary button-block" type="button" data-download="x86">下载 x86 版</button>
+          </article>
+
+          <article class="download-card">
+            <div class="download-head">
+              <span class="download-badge subtle">ARM</span>
+              <h3 class="download-title-tight">Windows ARM64</h3>
+            </div>
+            <p>适合 Windows ARM 设备，包括基于 ARM 的轻薄本与平板设备。</p>
+            <button class="button button-secondary button-block" type="button" data-download="arm64">下载 ARM64 版</button>
+          </article>
+
+          <article class="download-card download-card-mirror">
+            <div class="download-head">
+              <span class="download-badge subtle">中国大陆</span>
+              <h3>备用下载</h3>
+            </div>
+            <p>访问 GitHub 困难或下载较慢时，可使用蓝奏云备用下载。点击提取码可单独复制。</p>
+            <div class="download-meta-inline">
+              <span>提取码</span>
+              <button class="code-chip" id="copy-code" type="button">16vx</button>
+            </div>
+            <button class="button button-secondary button-block" id="open-mirror" type="button">复制提取码并打开网盘</button>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>©2026 Imvix · Windows 图像转换工具</p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
+
+

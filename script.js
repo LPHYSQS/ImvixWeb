@@ -5,9 +5,9 @@
     extractionCode: "16vx"
   },
   directDownloads: {
-    x64: "https://github.com/LPHYSQS/Imvix/releases/download/v1.3.0/Imvix-v1.3.0-win-x64.zip",
-    x86: "https://github.com/LPHYSQS/Imvix/releases/download/v1.3.0/Imvix-v1.3.0-win-x86.zip",
-    arm64: "https://github.com/LPHYSQS/Imvix/releases/download/v1.3.0/Imvix-v1.3.0-win-arm64.zip"
+    x64: "https://github.com/LPHYSQS/Imvix/releases/download/v1.3.1/Imvix-v1.3.1-win-x64.zip",
+    x86: "https://github.com/LPHYSQS/Imvix/releases/download/v1.3.1/Imvix-v1.3.1-win-x86.zip",
+    arm64: "https://github.com/LPHYSQS/Imvix/releases/download/v1.3.1/Imvix-v1.3.1-win-arm64.zip"
   }
 });
 

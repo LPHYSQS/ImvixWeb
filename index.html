@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
@@ -8,6 +8,7 @@
   <link rel="icon" type="image/png" href="assets/logo.png">
   <link rel="stylesheet" href="styles.css">
   <script defer src="script.js"></script>
+  <script type="module" src="https://get.microsoft.com/badge/ms-store-badge.bundled.js"></script>
 </head>
 <body>
   <div class="ambient ambient-left" aria-hidden="true"></div>
@@ -308,6 +309,20 @@
           <div class="download-summary-foot">
             <p class="download-summary-note">发布页会集中提供各架构安装包与更新记录。</p>
             <a class="button button-secondary button-block" href="https://github.com/LPHYSQS/Imvix/releases" target="_blank" rel="noreferrer">前往发布页</a>
+            <div class="download-store" aria-label="微软商店下载">
+              <span class="download-store-label">微软商店</span>
+              <div class="download-store-badge">
+                <ms-store-badge
+                  productid="9n3ztwz2f3z9"
+                  productname="Imvix"
+                  window-mode="direct"
+                  theme="auto"
+                  size="large"
+                  language="zh-cn"
+                  animation="on">
+                </ms-store-badge>
+              </div>
+            </div>
           </div>
         </article>
 

@@ -987,6 +987,32 @@ main {
   font-size: 0.92rem;
 }
 
+.download-store {
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(247, 249, 246, 0.92);
+}
+
+.download-store-label {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+
+.download-store-badge {
+  display: flex;
+  align-items: center;
+}
+
+.download-store-badge ms-store-badge {
+  display: block;
+  max-width: 100%;
+}
+
+
 .download-grid-four {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-auto-rows: 1fr;
@@ -1288,6 +1314,10 @@ button:focus-visible {
 
   .download-checklist {
     padding-left: 20px;
+  }
+
+  .download-store-badge {
+    justify-content: center;
   }
 
   .repo-card,

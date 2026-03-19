@@ -1,13 +1,13 @@
-﻿﻿const siteConfig = Object.freeze({
+﻿﻿﻿const siteConfig = Object.freeze({
   githubRepo: "https://github.com/LPHYSQS/Imvix",
   mainlandMirror: {
     url: "https://wwaoi.lanzouu.com/b00csz9skj",
     extractionCode: "16vx"
   },
   directDownloads: {
-    x64: "https://github.com/LPHYSQS/Imvix/releases/download/v1.3.2/Imvix-v1.3.2-win-x64.zip",
-    x86: "https://github.com/LPHYSQS/Imvix/releases/download/v1.3.2/Imvix-v1.3.2-win-x86.zip",
-    arm64: "https://github.com/LPHYSQS/Imvix/releases/download/v1.3.2/Imvix-v1.3.2-win-arm64.zip"
+    x64: "https://github.com/LPHYSQS/Imvix/releases/download/v1.3.3/Imvix-v1.3.3-win-x64.zip",
+    x86: "https://github.com/LPHYSQS/Imvix/releases/download/v1.3.3/Imvix-v1.3.3-win-x86.zip",
+    arm64: "https://github.com/LPHYSQS/Imvix/releases/download/v1.3.3/Imvix-v1.3.3-win-arm64.zip"
   }
 });
 

@@ -1,4 +1,4 @@
-﻿﻿﻿const siteConfig = Object.freeze({
+const siteConfig = Object.freeze({
   githubRepo: "https://github.com/LPHYSQS/Imvix",
   mainlandMirror: {
     url: "https://wwaoi.lanzouu.com/b00csz9skj",
@@ -138,16 +138,20 @@ function setupNav() {
 
 function setupActiveNav() {
   const navLinks = Array.from(document.querySelectorAll(".site-nav a"));
-  const sections = navLinks
+  const sectionLinks = navLinks.filter((link) => {
+    const href = link.getAttribute("href") ?? "";
+    return href.startsWith("#");
+  });
+  const sections = sectionLinks
     .map((link) => document.querySelector(link.getAttribute("href")))
     .filter(Boolean);
 
-  if (!navLinks.length || !sections.length || !("IntersectionObserver" in window)) {
+  if (!sectionLinks.length || !sections.length || !("IntersectionObserver" in window)) {
     return;
   }
 
   const linkById = new Map(
-    navLinks.map((link) => [link.getAttribute("href"), link])
+    sectionLinks.map((link) => [link.getAttribute("href"), link])
   );
 
   const observer = new IntersectionObserver((entries) => {
@@ -159,7 +163,7 @@ function setupActiveNav() {
       return;
     }
 
-    navLinks.forEach((link) => link.classList.remove("is-active"));
+    sectionLinks.forEach((link) => link.classList.remove("is-active"));
     const activeLink = linkById.get(`#${visibleEntry.target.id}`);
     if (activeLink) {
       activeLink.classList.add("is-active");

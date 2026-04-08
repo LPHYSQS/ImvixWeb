@@ -5,9 +5,9 @@ const siteConfig = Object.freeze({
     extractionCode: "16vx"
   },
   directDownloads: {
-    x64: "https://github.com/LPHYSQS/Imvix/releases/download/v1.3.3/Imvix-v1.3.3-win-x64.zip",
-    x86: "https://github.com/LPHYSQS/Imvix/releases/download/v1.3.3/Imvix-v1.3.3-win-x86.zip",
-    arm64: "https://github.com/LPHYSQS/Imvix/releases/download/v1.3.3/Imvix-v1.3.3-win-arm64.zip"
+    x64: "https://github.com/LPHYSQS/Imvix/releases/download/v1.3.4/Imvix-v1.3.4-win-x64.zip",
+    x86: "https://github.com/LPHYSQS/Imvix/releases/download/v1.3.4/Imvix-v1.3.4-win-x86.zip",
+    arm64: "https://github.com/LPHYSQS/Imvix/releases/download/v1.3.4/Imvix-v1.3.4-win-arm64.zip"
   }
 });
 
